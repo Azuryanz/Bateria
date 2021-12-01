@@ -23,7 +23,7 @@ Para reproduzir o áudio associado a uma das teclas, o usuário pode:
 - Apertar a respectiva tecla em seu teclado;
 - Clicar em uma das teclas na tela;
 
-Ao realizar qualquer uma das ações acima, um áudio será reproduzido, e tecla pressionada será brevemente colorida de uma outra cor, dependendo da posição da barra de volume (encontrada acima do teclado da bateria):
+Ao realizar qualquer uma das ações acima, um áudio será reproduzido, e a tecla pressionada será brevemente colorida de uma outra cor, dependendo da posição da barra de volume (encontrada acima do teclado da bateria):
 - ![#be3c3c](https://via.placeholder.com/15/be3c3c/000000?text=+) `#be3c3c` caso o volume esteja em zero (áudio mutado).
 - ![#44d1be](https://via.placeholder.com/15/44d1be/000000?text=+) `#44d1be` caso o volume esteja em qualquer outro valor (áudio habilitado);
 
