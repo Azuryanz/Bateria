@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bateria</title>
+  </head>
+  <body>
+    <div id="dimmer" onclick="closeNav(), dimOff()"></div> 
+    <div class="container">
+      <h1 class="title">Bateria</h1>
+      <div class="audioCheck">
+        <div><img src="assets/images/sound-mute.png" alt="no-sound" id="no-sound"></div>
+        <input type="range" id="volume-control" min="0" max="100" value="50">
+        <div><img src="assets/images/sound-full.png" alt="full-sound" id="full-sound"></div>
+      </div>
+      <div data-key="keyq" class="key" id="qKey" onclick="playSound('keyq')">Q</div>
+      <div data-key="keyw" class="key" id="wKey" onclick="playSound('keyw')">W</div>
+      <div data-key="keye" class="key" id="eKey" onclick="playSound('keye')">E</div>
+      <div data-key="keya" class="key" id="aKey" onclick="playSound('keya')">A</div>
+      <div data-key="keys" class="key" id="sKey" onclick="playSound('keys')">S</div>
+      <div data-key="keyd" class="key" id="dKey" onclick="playSound('keyd')">D</div>
+      <div data-key="keyz" class="key" id="zKey" onclick="playSound('keyz')">Z</div>
+      <div data-key="keyx" class="key" id="xKey" onclick="playSound('keyx')">X</div>
+      <div data-key="keyc" class="key" id="cKey" onclick="playSound('keyc')">C</div>
+      <div class="composer">
+        <input type="text" name="composition" id="composition" placeholder="Faça uma composição...">
+        <button class="play-btn">Tocar</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="disclaimer">
+        <h6>Criado por Azuryanz</h6>
+        <h6>seguindo o modelo de B7Web</h6>
+        <div class="guide">
+          Para mais informações <span onclick="dimOn(), openNav()" class="more">clique aqui</span>
+        </div>
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <div class="closebtn info" onclick="closeNav(), dimOff()">&times;</div>
+
+        <div class="info collapsible">Sobre</div>
+        <div class="dropdown-content">
+          <p>
+            Este projeto foi feito para praticar <strong>HTML</strong>, <strong>CSS</strong> e 
+            <strong>JavaScript</strong>, com base no projeto original da B7Web.
+          </p>
+          <br>
+          <p>
+            Para fins de prática, a estrutura HTML e CSS foi feita por conta própria, apenas olhando o layout
+            original. De mesma forma, novos elementos JavaScript foram adicinados, como a barra de volume e 
+            o este painel lateral de informações.
+          </p>
+          <br>
+          <p>
+            Para mais informações, acesse a vídeo-aula do projeto original: <a href="https://alunos.b7web.com.br/curso/javascript/projeto-1-bateria" target="blank">B7Web - Bateria</a>
+          </p>
+        </div>
+
+        <div class="info collapsible">Tutorial</div>
+        <div class="dropdown-content">
+          <p class="section">Barra de Volume</p>
+          <br>
+          <p>
+            Um usuário pode controlar o volume dos áudios com base nesta barra.
+          </p>
+          <br>
+          <p>
+            Enquanto o slider <strong>não</strong> estiver <strong>encostado no lado esquerdo</strong> da
+            barra, as teclas serão brevemente coloridas de um <span class="cyanColor">tom de ciano</span> 
+            quando seu som for reproduzido.
+          </p>
+          <br>
+          <p>
+            Quando o slider estiver <strong>encostado no lado esquerdo</strong> as teclas serão brevemente
+            coloridas de um <span class="redColor">tom de vermelho</span> ao tentar reproduzir seu som.
+          </p>
+          <br>
+
+          <p class="section">Teclado</p>
+          <br>
+          <p>
+            Para reproduzir um som, você pode <strong>clicar</strong> em um dos nove botões da tela (Q W E A S D Z X C)
+            ou <strong>apertar</strong> as respectivas teclas em seu teclado.
+          </p>
+          <br>
+          <p>
+            O comportamento da bateria depende da posição do interruptor Ouvir/Mutar, como explicado acima.
+          </p>
+          <br>
+
+          <p class="section">Área da Composição</p>
+          <br>
+          <p>
+            No campo de texto logo abaixo dos nove botões, um usuário pode digitar uma sequência de teclas
+            para ser tocada. Há uma espera de <strong>250ms</strong> entre a reprodução do som associado de cada tecla.
+          </p>
+          <br>
+          <p>
+            Quaisquer teclas digitadas além das nove anteriores serve apenas para ganhar tempo
+            entre uma tecla válida e outra.
+          </p>
+          <br>
+          <p>
+            Após finalizar uma composição, basta <strong>clicar</strong> no botão <strong>Tocar</strong> 
+            para reproduzí-la.
+          </p>
+
+        </div>
+
+      </div>
+    </footer>
+
+    <audio id="keyq-sound" src="sounds/keyq.wav"></audio>
+    <audio id="keyw-sound" src="sounds/keyw.wav"></audio>
+    <audio id="keye-sound" src="sounds/keye.wav"></audio>
+    <audio id="keya-sound" src="sounds/keya.wav"></audio>
+    <audio id="keys-sound" src="sounds/keys.wav"></audio>
+    <audio id="keyd-sound" src="sounds/keyd.wav"></audio>
+    <audio id="keyz-sound" src="sounds/keyz.wav"></audio>
+    <audio id="keyx-sound" src="sounds/keyx.wav"></audio>
+    <audio id="keyc-sound" src="sounds/keyc.wav"></audio>
+
+    <script src="assets/scripts/collapsible.js"></script>
+    <script src="assets/scripts/sidepanel.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/dimmer.js"></script>
+  </body>
+</html>
